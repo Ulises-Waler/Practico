@@ -1,7 +1,6 @@
-import { Canister, query, text } from 'azle';
-
-export default Canister({
-    greet: query([text], text, (name) => {
-        return `Hello, ${name}!`;
-    })
+import { Server } from 'azle';
+import express from "express";
+export default Server(()=>{
+const app = express();
+return app.listen();
 })

@@ -1,0 +1,39 @@
+{
+  "canisters": {
+    "Hackaton3_backend": {
+      "build": "npx azle Hackaton3_backend",
+      "candid": "src/Hackaton3_backend/Hackaton3_backend.did",
+      "gzip": true,
+      "main": "src/Hackaton3_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/Hackaton3_backend/Hackaton3_backend.wasm"
+    },
+    "Hackaton3_frontend": {
+      "dependencies": [
+        "Hackaton3_backend"
+      ],
+      "source": [
+        "src/Hackaton3_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Hackaton3_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
